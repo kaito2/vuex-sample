@@ -4,6 +4,7 @@
       <p>message length = {{ msgLength }}</p>
       <input type="text" v-model="newMsg" />
       <button v-on:click="update">Update</button>
+      <button v-on:click="repeat">Repeat</button>
     </div>
 </template>
 
@@ -35,6 +36,9 @@ export default {
     update () {
       // this.$store.state.msg = this.newMsg
       this.$store.commit(UPDATE_MESSAGE, this.newMsg)
+    },
+    repeat () {
+      this.$store.dispatch('repeat')
     }
   }
 }
