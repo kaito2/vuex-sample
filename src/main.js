@@ -11,6 +11,11 @@ Vue.config.productionTip = false
 const store = new Vuex.Store({
   state: {
     msg: 'Hello Vuex Store.'
+  },
+  mutations: {
+    updateMsg (state, newMsg) {
+      state.msg = newMsg
+    }
   }
 })
 
