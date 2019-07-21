@@ -3,28 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import Vuex from 'vuex'
-import { UPDATE_MESSAGE } from './store/mutation-types'
+import store from './store'
 
-Vue.use(Vuex)
 Vue.config.productionTip = false
-
-const store = new Vuex.Store({
-  state: {
-    msg: 'Hello Vuex Store.'
-  },
-  mutations: {
-    [UPDATE_MESSAGE] (state, newMsg) {
-      state.msg = newMsg
-    }
-  },
-  actions: {
-    repeat (context) {
-      let msg = context.state.msg
-      context.commit(UPDATE_MESSAGE, `${msg} ${msg}`)
-    }
-  }
-})
 
 /* eslint-disable no-new */
 new Vue({
