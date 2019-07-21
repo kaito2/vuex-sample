@@ -1,6 +1,6 @@
 # vuex-sample
 
-> A Vue.js project
+Just tried using Vuex for trial.
 
 ## Build Setup
 
